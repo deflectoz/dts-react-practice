@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <ul id="app"></ul>
+  </body>
+  <script>
+    let app = document.querySelector('#app');
+    let langs = ['Typescript', 'HTML', 'CSS'];
+
+    let nodes = langs.map(lang => {
+      let li = document.createElement('li');
+      li.textContent = lang;
+      return li;
+    });
+
+    //Multiple Append
+    app.append(nodes[0], nodes[1], nodes[2]);
+    //Shorted Way using destruction
+    app.append[...nodes];
+  </script>
+</html>
