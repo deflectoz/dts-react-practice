@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Tutorial DTS</title>
+  </head>
+  <body>
+    <ul id="menu"></ul>
+  </body>
+  <script>
+    function createMenuItem(name) {
+      let li = document.createElement('li');
+      li.textContent = name;
+      li.className = 'menu-item';
+      return li;
+    }
+    const menu = document.querySelector('#menu');
+    //AddMenu
+    menu.appendChild(createMenuItem('Home'));
+    menu.appendChild(createMenuItem('Services'));
+    menu.appendChild(createMenuItem('Abous Us'));
+  </script>
+</html>
